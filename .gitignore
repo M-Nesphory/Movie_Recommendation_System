@@ -130,3 +130,6 @@ dmypy.json
 
 **/.DS_Store
 **/.anaconda_projects
+
+# Anaconda Project Database files
+anaconda_projects/db/
