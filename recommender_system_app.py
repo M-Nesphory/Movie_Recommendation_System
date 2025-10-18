@@ -6,13 +6,12 @@ This is a temporary script file.
 """
 
 import pandas as pd
-import numpy as np
 import streamlit as st
 import random
 import pickle
 
-final_df = pd.read_csv("final_df.csv")
-final_model = pickle.load(open("final_svd_model.pkl", "rb"))
+final_df = pd.read_csv("Data/final_df.csv")
+final_model = pickle.load(open("Model/final_svd_model.pkl", "rb"))
 
 
 def get_svd_recommendations_from_input(input_movie_title, user_id, n=5):
@@ -84,7 +83,7 @@ def main():
         # Display results
         if not recommendations.empty:
             st.subheader("🎥 Recommended Movies")
-            st.dataframe(recommendations)   # ✅ shows as a nice interactive table
+            st.dataframe(recommendations)
         else:
                 st.warning("No recommendations found for that movie.")
     
