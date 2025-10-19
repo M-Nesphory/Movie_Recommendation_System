@@ -9,7 +9,7 @@
 
 ## Problem Statement
 
-- With thousands of movies to choose from users often experience:
+- With thousands of movies to choose from, users often experience:
 
 * **Decision fatigue** when navigating vast catalogs  
 * **Difficulty discovering** films that match their personal tastes  
@@ -66,7 +66,7 @@ cd Movie_Recommendation_System
 
 ### 2. Set up your Conda Environment  
 
-- Make sure Anaconda is installed then create and activate a new environment 
+- Make sure Anaconda is installed, then create and activate a new environment 
 ```bash
 conda create --name movie-recommender python=3.10
 conda activate movie-recommender
@@ -82,15 +82,15 @@ pip install pandas numpy scikit-learn matplotlib seaborn scipy streamlit scikit-
 
 ### 4. Load the Dataset  
  
- - Download the MovieLens Dataset(https://grouplens.org/datasets/movielens/latest/)  
+ - Download the [MovieLens Dataset](https://grouplens.org/datasets/movielens/latest/)  
 
-- Once downloaded extract the files and place them inside a data directory within your project folder.
+- Once downloaded, extract the files and place them inside a data directory within your project folder.
 
 ---
 
 ### 5. Launch the Streamlit App 
 
-- Once your model and dataset are ready run the interactive web app to generate personalized recommendations.
+- Once your model and dataset are ready, run the interactive web app to generate personalized recommendations.
 
 - Ensure that:
 
@@ -103,4 +103,5 @@ pip install pandas numpy scikit-learn matplotlib seaborn scipy streamlit scikit-
 ```bash
 streamlit run recommender_system_app.py
 ```
-- Access it in your browser at: http://localhost:8501/
+
+- Access it on your browser using this [link](http://localhost:8501/)
