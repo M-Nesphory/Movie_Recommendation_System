@@ -1,66 +1,82 @@
 # Couch-Potato Movie Recommendation System 
 
 ## Overview  
-The Couch-Potato Movie Recommendation System is a project
-designed to help users discover movies they’ll love using personalized recommendations. It is built with the MovieLens 100K dataset. This system uses Collaborative Filtering (CF) technique to learn from user rating patterns and suggest the top movies they are most likely to enjoy.  
+
+This project aims to help users find movies they'll enjoy through personalized recommendations. Its main objective is to suggest the top 5 movies that best match each user’s viewing preferences and past rating behavior.
 
 ## Problem Statement
 
-With thousands of available titles users often face:
+With thousands of movies to choose from, users often experience:
 
-* Decision fatigue while browsing large catalogs
+* **Decision fatigue** when navigating vast catalogs
+* **Difficulty discovering** films that match their personal tastes
+* **Missed chances** to uncover new favorites
 
-* Difficulty finding movies aligned with their tastes
+This project addresses these challenges by leveraging **machine learning** to deliver personalized movie recommendations tailored to each user’s unique preferences.
 
-* Missed opportunities to discover new favorite films
 
-This project aims to solve that by recommending movies tailored to individual preferences using machine learning.
-  
-  ## Technical Approach
+## Technical Approach 
 
-The system leverages Collaborative Filtering to identify user similarities and predict unseen movie ratings.
-
-### Steps:
-
-1. Data Preprocessing
-
-* Load and clean the MovieLens dataset
-
-* Prepare the user–item matrix
-
-2. Exploratory Data Analysis 
-
-* Examine rating distributions and popular genres
-
-* Identify trends across users and items
-
-3. Modeling
-
-* Implemented Matrix Factorization using SVD (Singular Value Decomposition) from the surprise library
-
-* Trained and evaluated the model with RMSE metrics
-
-* Generated Top 5 movie recommendations per user
-
-4. Evaluation
-
-* Measure prediction accuracy
-
-  
-1. Recommendation Generation
-
-* Produced top 5 movie suggestions for given user input
-
-* Displayed recommendations in readable format
+The system utilizes **Collaborative Filtering** to uncover relationships between users and predict ratings for movies they haven’t yet watched.
 
 ## Dataset
 
-Source: MovieLens 100K Dataset
+The dataset used in this project is sourced from the `[MovieLens Dataset](https://grouplens.org/datasets/movielens/latest/)` a dataset containing user ratings and movie metadata.  
 
-Contents:
+## Tools Used  
 
-* 100,000 ratings from 943 users on 1,682 movies
+- **Python**: Pandas, Scikit-learn, Numpy, Matplotlib, Seaborn, Scikit-surprise
+- **Model Deployment**: Streamlit  
+- **IDE**: Jupyter Notebook, Visual Studio Code  
 
-* Ratings range from 1 (least preferred) to 5 (most preferred)
+## Recommendations:  
 
-* Includes user and movie IDs, titles, and genres
+* Revive **Film-Noir** classics to help new audiences appreciate the evolution of cinema.  
+* Focus on **non-fictional films** which tend to receive higher ratings in the dataset.  
+* Offer a **wide variety of genres** as ratings show minimal deviation across genres.  
+* Emphasize **post-1982 releases** to appeal to modern audiences, while still including older classics.  
+* Incorporate **recently updated datasets** to include new and upcoming movie releases.  
+
+
+## Getting Started  
+
+To replicate this Movie Recommendation System locally, follow these steps:  
+
+### 1. Clone the Repository
+
+```bash
+git clone git@github.com:<your-username>/<your-repo-name>.git
+cd <your-repo-name>
+
+### 2. Set Up Your Conda Environment
+
+Make sure Anaconda is installed then create and activate a new environment.  
+
+conda create --name movie-recommender python=3.10
+conda activate movie-recommender  
+
+### 3. Install required packages  
+ 
+ pip install pandas numpy scikit-learn matplotlib seaborn scipy streamlit scikit-surprise
+
+### 4. Load the dataset  
+
+Download the `[MovieLens Dataset](https://grouplens.org/datasets/movielens/latest/)`  
+
+Once downloaded, extract the files and place them inside a data directory in your project folder:  
+
+### Launch the Streamlit App  
+
+Once your model and dataset are ready run the interactive web app to generate personalized recommendations.
+
+Ensure that:
+
+Your trained model file (`final_svd_model.pkl`) is in the project directory.
+
+The processed dataset (`final_df.csv`) is available for the app.
+
+Start the Streamlit server by running:
+
+streamlit run recommender_system_app.py
+
+Access it in in your browser at: `(http://localhost:8501/)`
