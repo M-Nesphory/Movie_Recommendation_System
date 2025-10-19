@@ -103,5 +103,3 @@ pip install pandas numpy scikit-learn matplotlib seaborn scipy streamlit scikit-
 ```bash
 streamlit run recommender_system_app.py
 ```
-
-- Access it on your browser using this [link](http://localhost:8501/)
