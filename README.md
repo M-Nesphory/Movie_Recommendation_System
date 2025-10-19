@@ -2,32 +2,32 @@
 
 ## Overview
 
-This project helps users discover movies they'll love through **personalized recommendations**.  
-The primary objective is to suggest the **top 5 movies** that best match each user’s viewing preferences and past rating behavior.
+- This project helps users discover movies they'll love through **personalized recommendations**.  
+- The primary objective is to suggest the **top 5 movies** that best match each user’s viewing preferences and past rating behavior.
 
 ---
 
 ## Problem Statement
 
-With thousands of movies to choose from users often experience:
+- With thousands of movies to choose from users often experience:
 
 * **Decision fatigue** when navigating vast catalogs  
 * **Difficulty discovering** films that match their personal tastes  
 * **Missed chances** to uncover new favorites
 
-This project addresses these challenges by leveraging **machine learning** to deliver personalized movie recommendations tailored to each user’s preferences.
+- This project addresses these challenges by leveraging **machine learning** to deliver personalized movie recommendations tailored to each user’s preferences.
 
 ---
 
 ## Technical Approach
 
-The system utilizes **Collaborative Filtering** to identify relationships between users and predict ratings for movies they haven’t yet watched.
+- The system utilizes **Collaborative Filtering** to identify relationships between users and predict ratings for movies they haven’t yet watched.
 
 ---
 
 ## Dataset
 
-The dataset used in this project is sourced from the [MovieLens Dataset](https://grouplens.org/datasets/movielens/latest/), a collection of user movie ratings and metadata.
+- The dataset used in this project is sourced from the [MovieLens Dataset](https://grouplens.org/datasets/movielens/latest/), a collection of user movie ratings and metadata.
 
 ---
 
@@ -51,7 +51,7 @@ The dataset used in this project is sourced from the [MovieLens Dataset](https:/
 
 ## Getting Started
 
-To replicate this Movie Recommendation System locally, follow these steps:
+- To replicate this Movie Recommendation System locally follow these steps:
 
 ---
 
@@ -66,39 +66,41 @@ cd Movie_Recommendation_System
 
 ### 2. Set up your Conda Environment  
 
-Make sure Anaconda is installed then create and activate a new environment 
-
+- Make sure Anaconda is installed then create and activate a new environment 
+```bash
 conda create --name movie-recommender python=3.10
 conda activate movie-recommender
-
+```
 ---
 
 ### 3. Install Required Packages  
 
+```bash
 pip install pandas numpy scikit-learn matplotlib seaborn scipy streamlit scikit-surprise
-
+```
 ---
 
 ### 4. Load the Dataset  
  
- Download the MovieLens Dataset(https://grouplens.org/datasets/movielens/latest/)  
+ - Download the MovieLens Dataset(https://grouplens.org/datasets/movielens/latest/)  
 
-Once downloaded, extract the files and place them inside a data directory within your project folder.
+- Once downloaded extract the files and place them inside a data directory within your project folder.
 
 ---
 
 ### 5. Launch the Streamlit App 
 
-Once your model and dataset are ready run the interactive web app to generate personalized recommendations.
+- Once your model and dataset are ready run the interactive web app to generate personalized recommendations.
 
-Ensure that:
+- Ensure that:
 
-Your trained model file (final_svd_model.pkl) is in the project directory.
+* Your trained model file `(final_svd_model.pkl)`is in the project directory.
 
-The processed dataset (final_df.csv) is available for the app.
+* The processed dataset `(final_df.csv)` is available for the app.
 
-Start the Streamlit server by running: 
+- Start the Streamlit server by running: 
 
+```bash
 streamlit run recommender_system_app.py
-
-Access it in your browser at: http://localhost:8501/
+```
+- Access it in your browser at: http://localhost:8501/
