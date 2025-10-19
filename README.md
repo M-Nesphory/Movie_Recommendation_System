@@ -53,11 +53,14 @@ The dataset used in this project is sourced from the [MovieLens Dataset](https:/
 
 To replicate this Movie Recommendation System locally, follow these steps:
 
+---
+
 ### 1. Clone the repository
 
 ```bash
 git clone git@github.com:M-Nesphory/Movie_Recommendation_System.git
-cd <Movie_Recommendation_System> 
+cd Movie_Recommendation_System
+```
 
 ---
 
